@@ -4,9 +4,7 @@
     = succeed '?' do
       %strong condo, apartment,   house
   
-  .search-input-wrapper
-    %input{ :type => "text", :placeholder => "enter a place, city or a location" }
-  %input{ :type => "submit", :value => "Search", :class => "btn primary" }
+  = render "shared/search"
   
   .search-filter
     %a.tag All

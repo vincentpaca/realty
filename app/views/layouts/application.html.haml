@@ -9,4 +9,11 @@
   %body
     .container
       .row
+        .top-head.group
+          .fourcol
+            %a.logo{ :href => root_url }
+          .eightcol.last
+            .main-search.ontop
+              = render "shared/search"
+              
         = yield
