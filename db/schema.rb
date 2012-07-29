@@ -11,11 +11,23 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120729120636) do
+ActiveRecord::Schema.define(:version => 20120729121533) do
+
+  create_table "ad_types", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "categories", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "posts", :force => true do |t|
     t.integer  "property_type"
-    t.integer  "advertised_as"
+    t.integer  "ad_type"
     t.decimal  "price",         :precision => 8, :scale => 2
     t.string   "location"
     t.text     "description"
@@ -23,6 +35,7 @@ ActiveRecord::Schema.define(:version => 20120729120636) do
     t.datetime "updated_at",                                  :null => false
     t.float    "latitude"
     t.float    "longitude"
+    t.integer  "category"
   end
 
 end
