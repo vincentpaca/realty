@@ -10,14 +10,14 @@ select{outline:none;}
 .btn.submit{font-size:18px;font-weight:bold;padding:10px 55px;background:#3581d5;color:#fff;}.btn.submit:active{background:#256fc2;top:1px;}
 h1{letter-spacing:-1px;line-height:40px;}
 input,textarea{outline:none;color:#353535;}
-body{font:13px/18px Arial,sans-serif;color:#353535;background:url('../images/bg1.png');}
-a.logo{background:url(../images/logo.png) no-repeat;width:258px;height:64px;display:block;margin:0 auto;}a.logo:active{background-position:0 -64px;}
+body{font:13px/18px Arial,sans-serif;color:#353535;background:url('bg1.png');}
+a.logo{background:url('logo.png') no-repeat;width:258px;height:64px;display:block;margin:0 auto;}a.logo:active{background-position:0 -64px;}
 .header{margin-top:30px;margin-bottom:30px;}
 .top-head{padding-top:30px;}
 .main-search{margin:30px 0 60px 0;text-align:center;}.main-search.ontop{margin-top:0;margin-bottom:0;}
 .main-search h1{font-size:40px;font-weight:normal;margin-bottom:50px;text-shadow:0 1px 0 #fff;}.main-search h1 strong{font-weight:bold;}
 .main-search input[type=submit]{vertical-align:top;padding:0 18px;height:50px;}
-.search-input-wrapper{background:#fff;display:inline-block;padding-left:10px;border:3px solid #c4b9ad;border-radius:5px;}.search-input-wrapper input[type=text]{border:1px solid #c9c9c9;padding:5px 7px;padding:10px;padding-left:25px;font-size:18px;width:500px;background:url('../images/map-pin.png') left no-repeat;border:none;}
+.search-input-wrapper{background:#fff;display:inline-block;padding-left:10px;border:3px solid #c4b9ad;border-radius:5px;}.search-input-wrapper input[type=text]{border:1px solid #c9c9c9;padding:5px 7px;padding:10px;padding-left:25px;font-size:18px;width:500px;background:url('map-pin.png') left no-repeat;border:none;}
 .search-filter{width:645px;text-align:left;margin:10px auto 30px auto;}.search-filter h3{padding:10px;}
 .search-filter li{display:block;}
 .search-filter a.tag{text-decoration:none;margin-right:10px;font-size:16px;font-weight:bold;color:#616161;padding:5px 7px;margin-right:10px;display:inline-block;border-radius:3px;}.search-filter a.tag:active{position:relative;top:1px;}
