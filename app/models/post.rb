@@ -1,5 +1,5 @@
 class Post < ActiveRecord::Base
-  attr_accessible :ad_type, :description, :location, :price, :property_type
+  attr_accessible :ad_type, :category, :description, :location, :price, :property_type
   
   geocoded_by :location
   after_validation :geocode
