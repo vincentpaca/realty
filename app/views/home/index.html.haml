@@ -12,3 +12,19 @@
     %a.tag House and Lot
     %a.tag Apartment
     %a.tag Commercial
+    
+.recent-list-wrap.group
+  - @posts.each_slice(4) do |slice|
+    .fourcol
+      .recent-list.list
+        - slice.each do |post|
+          .list-details.group
+            %ul
+              %li.photo
+              %li.listing-info
+                %a
+                  %span.price 
+                    = number_to_currency(post.price, :unit => "Php")
+                  %span.address 
+                    = post.location
+                  %span.details                    
