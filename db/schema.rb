@@ -11,16 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120729091038) do
+ActiveRecord::Schema.define(:version => 20120729120636) do
 
   create_table "posts", :force => true do |t|
     t.integer  "property_type"
-    t.string   "advertised_as"
+    t.integer  "advertised_as"
     t.decimal  "price",         :precision => 8, :scale => 2
     t.string   "location"
     t.text     "description"
     t.datetime "created_at",                                  :null => false
     t.datetime "updated_at",                                  :null => false
+    t.float    "latitude"
+    t.float    "longitude"
   end
 
 end
