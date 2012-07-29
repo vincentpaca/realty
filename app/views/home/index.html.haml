@@ -1,0 +1,16 @@
+.main-search
+  %h1
+    Looking for a
+    = succeed '?' do
+      %strong condo, apartment,   house
+  
+  .search-input-wrapper
+    %input{ :type => "text", :placeholder => "enter a place, city or a location" }
+  %input{ :type => "submit", :value => "Search", :class => "btn primary" }
+  
+  .search-filter
+    %a.tag All
+    %a.tag Condo
+    %a.tag House and Lot
+    %a.tag Apartment
+    %a.tag Commercial
