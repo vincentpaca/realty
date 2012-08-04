@@ -10,8 +10,16 @@
     .container
       .row
         .top-head.group
+
           .fourcol
             %a.logo{ :href => root_url }
+            .top-nav
+              %a.btn.signup-agent{ :href => "#" }
+                Signup here
+              %a.submit-listing{ :href => "#" }
+                = precede '+ ' do
+                  Submit a listing
+
           .eightcol.last
             .main-search.ontop
               = render "shared/search"
