@@ -11,11 +11,6 @@
       .row
         .header
           %a.logo{ :href => root_url }
-          .top-nav
-            %a.btn.signup-agent{ :href => "#" }
-              Signup here
-            %a.submit-listing{ :href => "#" }
-              = precede '+ ' do
-                Submit a listing
+          = render 'shared/top_navigation'
 
         = yield

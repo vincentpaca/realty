@@ -11,9 +11,6 @@
       .row
         .header
           %a.logo{ :href => root_url }
+          = render 'shared/top_navigation'
 
-          .top-nav
-            %a.submit-listing{ :href => new_post_path }
-              %span Submit a listing
-        
         = yield
