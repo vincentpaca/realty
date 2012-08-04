@@ -1,0 +1,21 @@
+!!!
+%html
+  %head
+    %title #{@page_title ||= "Realty.ph - The best realty finds in the Philippines"} 
+    = stylesheet_link_tag    "application", :media => "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+
+  %body
+    .container
+      .row
+        .header
+          %a.logo{ :href => root_url }
+          .top-nav
+            %a.btn.signup-agent{ :href => "#" }
+              Signup here
+            %a.submit-listing{ :href => "#" }
+              = precede '+ ' do
+                Submit a listing
+
+        = yield
