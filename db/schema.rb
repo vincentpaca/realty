@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120731143736) do
+ActiveRecord::Schema.define(:version => 20120804122144) do
 
   create_table "ad_types", :force => true do |t|
     t.string   "name"
@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(:version => 20120731143736) do
     t.float    "latitude"
     t.float    "longitude"
     t.integer  "category_id"
+    t.string   "title"
   end
 
 end
