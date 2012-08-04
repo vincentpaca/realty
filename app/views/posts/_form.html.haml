@@ -4,22 +4,45 @@
       %h2= "#{pluralize(@post.errors.count, "error")} prohibited this post from being saved:"
       %ul
         - @post.errors.full_messages.each do |msg|
-          %li= msg
+          %li=msg
 
-  .field
-    = f.label :property_type
-    = f.number_field :property_type
-  .field
-    = f.label :advertised_as
-    = f.text_field :advertised_as
-  .field
-    = f.label :price
-    = f.text_field :price
-  .field
-    = f.label :location
-    = f.text_field :location
-  .field
-    = f.label :description
-    = f.text_area :description
-  .actions
-    = f.submit 'Save'
+  .threecol
+    .sidebar
+      .inner-sidebar
+        .filter-selector
+          %fieldset
+            %label= f.label :category, "Property Type"
+            = select "post", "category_id", categories
+          %fieldset
+            %label= f.label :ad_type, "Advertise As"
+            = select "post", "ad_type_id", ad_types
+          %fieldset
+            %label= f.label :price
+            = f.text_field :price, :size => 20
+          %fieldset
+            %label= f.label :location
+            = f.text_area :location, :rows => 10, :cols => 20
+          %fieldset
+            %h3 Additional Information
+
+  .sixcol.last
+    .filter-selector
+      %fieldset.post-heading
+        %h1
+          %span
+            %a{ :href => "#" } edit
+      %fieldset
+        %label= f.label :description
+        = f.text_area :description, :class => "description"
+      %fieldset
+        .submit-actions.center  
+          .actions
+            = f.submit 'Save', :class => "btn submit"
+
+  .threecol
+    .filter-selector
+      %fieldset
+        .upload-container
+          %p.upload-info Drag files to upload here
+          %p or
+          %input{ :type => "button", :value => "Select files", :class => "btn upload"
