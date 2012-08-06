@@ -12,6 +12,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    @page_title = @post.title
 
     respond_to do |format|
       format.html # show.html.erb
@@ -21,6 +22,7 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
+    @page_title = "New Posting"
 
     respond_to do |format|
       format.html # new.html.erb
@@ -30,6 +32,7 @@ class PostsController < ApplicationController
 
   def edit
     @post = Post.find(params[:id])
+    @page_title = "Editing #{@post.title}"
   end
 
   def create
