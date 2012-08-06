@@ -9,7 +9,7 @@
   .threecol
     .sidebar
       .inner-sidebar
-        .filter-selector
+        .filter-selector.new-post
           %fieldset
             %label= f.label :category, "Property Type"
             = select "post", "category_id", categories
@@ -18,12 +18,24 @@
             = select "post", "ad_type_id", ad_types
           %fieldset
             %label= f.label :price
-            = f.text_field :price, :size => 20
+            = f.text_field :price
           %fieldset
             %label= f.label :location
             = f.text_area :location, :rows => 10, :cols => 20
           %fieldset
             %h3 Additional Information
+          %fieldset
+            %label= f.label :bedrooms
+            = f.text_field :bedrooms
+          %fieldset
+            %label= f.label :baths
+            = f.text_field :baths
+          %fieldset
+            %label= f.label :floors
+            = f.text_field :floors
+          %fieldset
+            %label= f.label :lot_area
+            = f.text_field :lot_area
 
   .sixcol.last
     .filter-selector
