@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120804122144) do
+ActiveRecord::Schema.define(:version => 20120806145119) do
 
   create_table "ad_types", :force => true do |t|
     t.string   "name"
@@ -36,6 +36,10 @@ ActiveRecord::Schema.define(:version => 20120804122144) do
     t.float    "longitude"
     t.integer  "category_id"
     t.string   "title"
+    t.integer  "bedrooms"
+    t.integer  "baths"
+    t.integer  "floors"
+    t.integer  "lot_area"
   end
 
 end
