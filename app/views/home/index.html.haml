@@ -25,5 +25,6 @@
                 %span.price 
                   = number_to_currency(post.price, :unit => "Php")
                 %span.address 
-                  = post.location
-                %span.details                    
+                  = post.title
+                %span.details 
+                  = "#{humanize(post.baths, 'Bath')}, #{humanize(post.bedrooms, 'Bed')}, #{post.lot_area} sqm"
